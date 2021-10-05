@@ -1,8 +1,8 @@
 import streamlit as st
 
 import pandas as pd
-import numpy as np
-from itertools import combinations
+#import numpy as np
+#from itertools import combinations
 from st_aggrid import AgGrid
 #st.set_page_config(layout="wide")
 
