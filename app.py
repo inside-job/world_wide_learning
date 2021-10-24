@@ -93,7 +93,7 @@ def get_weekday_schedule(module , english_lvl, stdt_lst):
         for slot in slot_lst:
             model.constraints.add(model.works[student, slot] == 0)
             
-    results =  SolverFactory('cbc').solve(model)
+    results =  SolverFactory('glpk').solve(model)
     students_slot = [model.works[student, slot].value for student in students for slot in list(slot_utc.keys()) ]
     
     weekday_student_slot_allocation = {}
